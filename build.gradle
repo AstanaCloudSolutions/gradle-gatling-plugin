@@ -1,8 +1,8 @@
 apply plugin: 'groovy'
 apply plugin: 'maven-publish'
 
-group 'kz.cloudsolution'
-version '1.0.0-SNAPSHOT'
+group 'kz.cloudsolution.gradle.plugins'
+version '1.0.1'
 
 publishing {
     publications {
