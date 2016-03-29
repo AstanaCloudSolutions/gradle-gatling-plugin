@@ -1,0 +1,22 @@
+apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+
+group 'kz.cloudsolution'
+version '1.0.0-SNAPSHOT'
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId group
+            artifactId project.name
+            version version
+
+            from components.java
+        }
+    }
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
