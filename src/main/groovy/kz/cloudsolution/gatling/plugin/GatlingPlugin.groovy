@@ -43,6 +43,7 @@ class GatlingPlugin implements Plugin<Project> {
 
         project.task('scenarioTest',
                 dependsOn: 'build') << {
+
             project.gatling.verifySettings()
             final def sourceSet = project.sourceSets.test
             final def gatlingRequestBodiesDirectory = firstPath(sourceSet.resources.srcDirs) + "/bodies"
